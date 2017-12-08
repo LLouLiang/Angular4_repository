@@ -1,0 +1,37 @@
+<div>
+  <h1>
+    Update published Event
+  </h1>
+  <form (submit)="onEventUpdate()">
+      <fieldset>
+          <div class="form-group">
+           <div class="form-group">
+             <label class="col-form-label" for="inputDefault">Event Title</label>
+             <input type="text" [(ngModel)]="title" name="eventtitle" class="form-control" placeholder="" id="inputDefault" ngDefaultControl>
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="form-group">
+             <label class="col-form-label" for="inputDefault">Author Name</label>
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="form-group">
+             <label class="col-form-label" for="inputDefault">Date</label>
+             <input type="date" [(ngModel)]="date" name="eventdate" class="form-control" placeholder="MM/DD/YY" id="inputDefault" ngDefaultControl>
+           </div>
+         </div>
+         <div class="form-group">
+           <div class="form-group">
+             <label class="col-form-label" for="inputDefault">Place</label>
+             <input type="text" [(ngModel)]="place" name="eventplace" class="form-control" placeholder="Enter Place" id="inputDefault" ngDefaultControl>
+           </div>
+         </div>
+          <div class="form-group">
+           <label for="exampleTextarea">Event Content</label>
+           <textarea class="form-control" id="exampleTextarea" rows="3" [(ngModel)]="content" name="eventcontent"></textarea>
+         </div>
+         <button type="submit" class="btn btn-outline-success">Update</button>
+       </fieldset>
+  </form>
+</div>

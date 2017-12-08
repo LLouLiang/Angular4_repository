@@ -1,0 +1,44 @@
+<div>
+    <div width="10%" style="float:left; top:50px">
+        <app-personalevent></app-personalevent>
+    </div>
+    <div width="50%" style="float:right">
+        
+      <h1>
+        Create an event
+      </h1>
+      <form (submit)="onEventSubmit()">
+        <fieldset>
+           <div class="form-group">
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Event Title</label>
+              <input type="text" [(ngModel)]="title" name="eventtitle" class="form-control" placeholder="Enter Title" id="inputDefault" ngDefaultControl>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Host Name</label>
+              <input type="text" [(ngModel)]="author" name="eventauthor" class="form-control" placeholder="Enter Name" id="inputDefault" ngDefaultControl>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Date</label>
+              <input type="date" [(ngModel)]="date" name="eventdate" class="form-control" placeholder="MM/DD/YY" id="inputDefault" ngDefaultControl>
+            </div>
+          </div>
+          <div class="form-group">
+            <div class="form-group">
+              <label class="col-form-label" for="inputDefault">Place</label>
+              <input type="text" [(ngModel)]="place" name="eventplace" class="form-control" placeholder="Enter Place" id="inputDefault" ngDefaultControl>
+            </div>
+          </div>
+           <div class="form-group">
+            <label for="exampleTextarea">Event Content</label>
+            <textarea class="form-control" id="exampleTextarea" rows="3" [(ngModel)]="content" name="eventcontent"></textarea>
+          </div>
+          <button type="submit" class="btn btn-outline-success">Publish</button>
+        </fieldset>
+      </form>
+    </div>
+</div>
