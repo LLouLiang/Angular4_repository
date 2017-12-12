@@ -1,0 +1,21 @@
+<div>
+    <div class="list-group" *ngFor="let appoint of appointment; let index = index">
+      <a *ngIf="(index + 1)%2!=0" class="list-group-item list-group-item-action flex-column align-items-start active">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{appoint.subject}}</h5>-<h4 class="btn-outline-success">{{appoint.status}}</h4>
+          <small>{{appoint.date}}</small>
+        </div>
+        <small>{{appoint.place}} with {{appoint.participant}} </small>
+        <button *ngIf="isqualify()" (click)="onArchivedClick(appoint)" type="button" class="btn btn-outline-info" style="float:right">Archived</button>
+      </a>
+      <a *ngIf="(index + 1)%2==0" class="list-group-item list-group-item-action flex-column align-items-start">
+        <div class="d-flex w-100 justify-content-between">
+          <h5 class="mb-1">{{appoint.subject}}</h5>-<h4 class="btn-outline-success">{{appoint.status}}</h4>
+          <small class="text-muted">{{appoint.date}}</small>
+        </div>
+        <small class="text-muted">{{appoint.place}} with {{appoint.participant}}</small>
+        <button *ngIf="isqualify()" (click)="onArchivedClick(appoint)" type="button" class="btn btn-outline-info" style="float:right">Archived</button>
+      </a>
+    </div>
+    <button *ngIf="!isqualify()" (click)="btnClick()" type="button" class="btn btn-outline-success">Make an appointment</button>
+  </div>
